@@ -1,0 +1,27 @@
+Especificaciones del predicado está_explorado:
+
+Propósito:
+Verificar si un segmento en una tabla t ha sido explorado correctamente, siguiendo ciertos pasos específicos.
+
+Definición:
+Un segmento en una tabla t de componentes de tipo T que derivan de COMPARABLE es una serie de componentes consecutivos cuyo valor máximo es el primero de la serie.
+
+Parámetros de entrada:
+- t: La tabla de componentes.
+- inicio: El índice de inicio del segmento.
+- fin: El índice de fin del segmento.
+
+Salida:
+- Un valor booleano que indica si el segmento ha sido explorado correctamente.
+
+Restricciones:
+- Los índices inicio y fin deben ser índices válidos en la tabla t.
+- El índice inicio debe ser menor o igual que el índice fin.
+
+Especificaciones:
+- Verificar si el segmento t[inicio:fin] ha sido explorado correctamente consiste en los siguientes pasos:
+    1. Hacer una copia de seguridad del máximo del segmento: m = t[inicio].
+    2. Desplazar los elementos de t[inicio+1:fin+1] una celda hacia la izquierda.
+    3. Colocar el elemento más grande del segmento en la posición fin: t[fin] = m.
+- Si el segmento ha sido explorado correctamente, el valor máximo del segmento se habrá movido a la posición fin de la tabla t. Por lo tanto, el predicado devuelve True.
+- Si el segmento no ha sido explorado correctamente (por ejemplo, debido a índices inválidos), el predicado devuelve False.
