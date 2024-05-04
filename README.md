@@ -1,4 +1,4 @@
-# Ejercicios de Recursividad
+# Ejercicios de Ordenación
 
 ## Pablo Márquez López
 
